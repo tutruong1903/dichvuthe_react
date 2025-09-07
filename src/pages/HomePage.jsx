@@ -2,7 +2,10 @@ function HomePage() {
 	return (
 		<>
 			<section className="hero-banner">
-				<img src="/assets/background.png" alt="Dịch vụ thanh toán" />
+				<picture>
+					<source media="(max-width: 768px)" srcSet="/assets/background2.png" />
+					<img src="/assets/background.png" alt="Dịch vụ thanh toán" />
+				</picture>
 			</section>
 
 			<section className="stats">
