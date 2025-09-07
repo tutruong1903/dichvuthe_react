@@ -6,7 +6,13 @@ function Header() {
 			<div className="container">
 				<nav className="navbar">
 					<div className="logo">
-						<h1>DichVuThe<span>UyTin</span></h1>
+						<Link to="/" className="brand">
+							<img src="/assets/logo.png" alt="Mavic" className="brand-logo" />
+							<div className="brand-text">
+								<span className="brand-name">Mavic</span>
+								<span className="brand-tagline" style={{color: '#000000'}}>Vững Tài Chính - Trọn Niềm Tin</span>
+							</div>
+						</Link>
 					</div>
 					<div className="nav-menu" id="navMenu">
 						<ul className="nav-list">

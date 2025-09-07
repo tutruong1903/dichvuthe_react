@@ -1,14 +1,15 @@
 /* === GLOBAL STYLES === */
 :root {
-    --primary-color: #e63946;
-    --primary-dark: #c1121f;
-    --primary-light: #ffccd5;
-    --secondary-color: #1d3557;
-    --secondary-dark: #0d1b2a;
-    --text-dark: #333333;
-    --text-light: #666666;
+    /* Mavic brand palette */
+    --primary-color: #0a4fbf; /* deep blue */
+    --primary-dark: #083f98;
+    --primary-light: #e6efff;
+    --secondary-color: #18c1d9; /* teal */
+    --secondary-dark: #109aad;
+    --text-dark: #243041;
+    --text-light: #5a6b82;
     --text-white: #ffffff;
-    --background-light: #f9f9f9;
+    --background-light: #f5f8fc;
     --background-white: #ffffff;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
@@ -158,6 +159,18 @@ img {
 
 .logo span {
     color: var(--primary-color);
+}
+
+/* Brand (logo + name) */
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand-logo { width: 40px; height: 40px; border-radius: 0; display: block; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-name { font-size: 1.4rem; font-weight: 800; letter-spacing: 0.5px; color: var(--text-dark); }
+.brand-tagline { font-size: 0.8rem; color: #000000; margin-top: 2px; }
+
+@media (max-width: 768px) {
+    /* Show only logo on mobile */
+    .brand-name, .brand-tagline { display: none; }
 }
 
 .nav-list {
@@ -312,23 +325,26 @@ img {
     text-align: center;
 }
 
+/* Distinct widget cards on stats section */
 .stat-item {
-    padding: 20px;
-    border-radius: var(--border-radius);
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    padding: 24px;
+    border-radius: 16px;
+    background: #ffffff;
+    color: var(--text-dark);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.06);
 }
 
 .stat-number {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--primary-color);
     margin-bottom: 10px;
 }
 
 .stat-label {
-    font-size: 1.1rem;
-    color: var(--text-white);
+    font-size: 1.05rem;
+    color: var(--text-light);
 }
 
 /* === ABOUT SECTION === */
