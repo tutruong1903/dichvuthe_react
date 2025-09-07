@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import NewsPage from './pages/NewsPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
+import NewsDetailPage from './pages/NewsDetailPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: 've-chung-toi', element: <AboutPage /> },
       { path: 'dich-vu', element: <ServicesPage /> },
       { path: 'tin-tuc', element: <NewsPage /> },
+      { path: 'tin-tuc/:slug', element: <NewsDetailPage /> },
       { path: 'lien-he', element: <ContactPage /> },
     ],
   },
