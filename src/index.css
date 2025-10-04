@@ -168,9 +168,46 @@ img {
 .brand-name { font-size: 1.4rem; font-weight: 800; letter-spacing: 0.5px; color: var(--text-dark); }
 .brand-tagline { font-size: 0.8rem; color: #000000; margin-top: 2px; }
 
+
+
 @media (max-width: 768px) {
-    /* Show only logo on mobile */
-    .brand-name, .brand-tagline { display: none; }
+    /* Center logo and brand text on mobile */
+    .navbar {
+        justify-content: center;
+        position: relative;
+    }
+    
+    .brand {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .brand-text {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .brand-name {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    
+    .brand-tagline {
+        display: none;
+    }
+    
+    .hamburger {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .nav-list {
