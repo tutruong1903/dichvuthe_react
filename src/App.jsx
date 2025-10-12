@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import FloatingContact from './components/FloatingContact.jsx'
+import Header from './components/landing/Header.jsx'
+import Footer from './components/landing/Footer.jsx'
+import FloatingContact from './components/landing/FloatingContact.jsx'
 
 function App() {
   return (

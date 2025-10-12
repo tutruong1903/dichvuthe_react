@@ -1,4 +1,44 @@
+import { useState } from 'react'
+import { consultationService } from '../services'
+
 function HomePage() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phoneNumber: ''
+  })
+  const [loading, setLoading] = useState(false)
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if (!formData.fullName || !formData.phoneNumber) {
+      alert('Vui lòng điền đầy đủ thông tin')
+      return
+    }
+
+    try {
+      setLoading(true)
+      await consultationService.createConsultation({
+        fullName: formData.fullName,
+        phoneNumber: formData.phoneNumber
+      })
+      alert('Đã gửi yêu cầu thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.')
+      setFormData({ fullName: '', phoneNumber: '' })
+    } catch (error) {
+      console.error('Error submitting consultation:', error)
+      alert('Có lỗi xảy ra, vui lòng thử lại sau')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <>
       <section className="hero-banner">
@@ -308,14 +348,17 @@ function HomePage() {
             </div>
             <div className="contact-form">
               <h3>Yêu cầu tư vấn và gọi lại</h3>
-              <form onSubmit={(e) => e.preventDefault()}>
+              <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Họ và tên</label>
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     placeholder="Họ và tên"
+                    required
                   />
                 </div>
                 <div className="form-group">
@@ -323,13 +366,19 @@ function HomePage() {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
                     placeholder="Số điện thoại"
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-submit">
-                  <i className="fas fa-paper-plane"></i> Gửi Ngay
+                <button 
+                  type="submit" 
+                  className="btn btn-submit"
+                  disabled={loading}
+                >
+                  <i className="fas fa-paper-plane"></i> {loading ? 'Đang gửi...' : 'Gửi Ngay'}
                 </button>
               </form>
             </div>

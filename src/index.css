@@ -1,4 +1,28 @@
 /* === GLOBAL STYLES === */
+
+/* Loading spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Auth form styles */
+.auth-form-input:focus {
+  border-color: var(--primary-color) !important;
+}
+
+.auth-form-input:focus + span {
+  color: var(--primary-color) !important;
+}
+
+.auth-form-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(10, 79, 191, 0.3);
+}
+
+.auth-form-button:active {
+  transform: translateY(0);
+}
 :root {
     /* Mavic brand palette */
     --primary-color: #0a4fbf; /* deep blue */
