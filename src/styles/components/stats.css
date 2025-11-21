@@ -1,0 +1,27 @@
+/* Stats Section */
+.stats {
+    margin: 80px 200px 0;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    background: #f8fafb;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 40px rgba(0, 75, 135, 0.08);
+    border: 1px solid rgba(0, 75, 135, 0.08);
+}
+
+.stat-item h2 {
+    font-size: 32px;
+    background: linear-gradient(135deg, #004B87 0%, #5DD3D0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-item p {
+    color: #4a5568;
+    font-weight: 500;
+}
+

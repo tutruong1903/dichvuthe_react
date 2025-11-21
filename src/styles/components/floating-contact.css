@@ -1,0 +1,117 @@
+/* === FLOATING CONTACT === */
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+
+.floating-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 4px 20px rgba(0, 75, 135, 0.25);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.floating-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.floating-btn:hover::before {
+    width: 120%;
+    height: 120%;
+}
+
+.floating-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 75, 135, 0.4);
+}
+
+.floating-btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.phone-btn {
+    background: linear-gradient(135deg, #004B87 0%, #0066b3 100%);
+    color: #fff;
+    animation: phonePulse 2s ease-in-out infinite;
+}
+
+.phone-btn i {
+    font-size: 24px;
+}
+
+.zalo-btn {
+    background: linear-gradient(135deg, #0068ff 0%, #0080dd 100%);
+    color: #fff;
+    animation: zaloPulse 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.zalo-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes phonePulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(0, 75, 135, 0.25);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(0, 75, 135, 0.4), 0 0 0 8px rgba(0, 75, 135, 0.1);
+    }
+}
+
+@keyframes zaloPulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(0, 128, 221, 0.25);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(0, 128, 221, 0.4), 0 0 0 8px rgba(0, 128, 221, 0.1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .floating-contact {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+    
+    .floating-btn {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .phone-btn i {
+        font-size: 20px;
+    }
+    
+    .zalo-btn {
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,283 @@
+/* Design Section Component Styles */
+
+.design-section {
+    margin-top: 150px;
+    padding: 80px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.design-content {
+    flex: 1;
+    max-width: 550px;
+    position: relative;
+}
+
+.design-title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    position: relative;
+    color: #1a2332;
+}
+
+.design-description {
+    color: #4a5568;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.create-card-btn {
+    background: linear-gradient(135deg, #004B87 0%, #0066b3 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 75, 135, 0.2);
+}
+
+.create-card-btn:hover {
+    box-shadow: 0 8px 30px rgba(0, 75, 135, 0.4);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #0066b3 0%, #0080dd 100%);
+}
+
+.create-card-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.star-bottom {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    margin: 0;
+}
+
+/* Card Stack */
+.card-stack {
+    flex: 1;
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stack-card {
+    width: 380px;
+    height: 240px;
+    border-radius: 20px;
+    padding: 30px;
+    position: absolute;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.card-1 {
+    background: linear-gradient(135deg, #004B87 0%, #0066b3 100%);
+    border: 1px solid rgba(93, 211, 208, 0.3);
+    z-index: 3;
+    transform: rotate(8deg) translateY(0);
+    color: white;
+    box-shadow: 0 10px 40px rgba(0, 75, 135, 0.3);
+}
+
+.card-2 {
+    background: linear-gradient(135deg, #5DD3D0 0%, #4AC5C2 100%);
+    border: 1px solid rgba(0, 75, 135, 0.2);
+    z-index: 2;
+    transform: rotate(4deg) translateY(15px) translateX(-10px);
+    opacity: 0.95;
+    color: white;
+    box-shadow: 0 10px 40px rgba(93, 211, 208, 0.3);
+}
+
+.card-3 {
+    background: white;
+    color: #1a2332;
+    z-index: 1;
+    transform: rotate(0deg) translateY(30px) translateX(-20px);
+    opacity: 0.9;
+    border: 1px solid rgba(0, 75, 135, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 75, 135, 0.15);
+}
+
+.card-stack:hover .card-1 {
+    transform: rotate(10deg) translateY(-10px);
+}
+
+.card-stack:hover .card-2 {
+    transform: rotate(5deg) translateY(10px) translateX(-5px);
+}
+
+.card-stack:hover .card-3 {
+    transform: rotate(0deg) translateY(25px) translateX(-15px);
+}
+
+.card-logo-top {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    opacity: 0.9;
+}
+
+.card-logo-top svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-nfc-top {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 24px;
+    color: white;
+    opacity: 0.7;
+    letter-spacing: 2px;
+}
+
+.card-label {
+    font-size: 10px;
+    opacity: 0.7;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+}
+
+.card-1 > .card-label {
+    margin-top: 50px;
+    font-size: 11px;
+}
+
+.card-3 .card-label {
+    color: #718096;
+}
+
+.card-number-stack {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    color: white;
+}
+
+.card-3 .card-number-stack {
+    color: #1a2332;
+    margin-top: 30px;
+}
+
+.card-info-stack {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card-info-stack label {
+    font-size: 10px;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card-info-stack p {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.card-name-stack,
+.card-exp-stack {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: white;
+}
+
+.card-3 .card-name-stack,
+.card-3 .card-exp-stack {
+    color: #1a2332;
+}
+
+.card-3 .card-info-stack label {
+    color: #718096;
+}
+
+.card-grid-icon {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 24px;
+    height: 24px;
+    color: white;
+    opacity: 0.9;
+}
+
+.card-3 .card-grid-icon {
+    color: #004B87;
+    opacity: 0.6;
+}
+
+.card-grid-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .design-section {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .card-stack {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .design-section {
+        padding: 60px 20px;
+        margin-top: 80px;
+    }
+    
+    .design-title {
+        font-size: 36px;
+    }
+    
+    .design-description {
+        font-size: 15px;
+    }
+    
+    .stack-card {
+        width: 320px;
+        height: 200px;
+        padding: 20px;
+    }
+    
+    .card-number-stack {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,138 @@
+/* Partners Section */
+.partners {
+    margin: 60px 0;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    background: transparent;
+    padding: 80px 0;
+}
+
+.partners-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    color: #1a2332;
+    text-align: center;
+}
+
+.partners-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.partners-track {
+    display: flex;
+    gap: 100px;
+    width: max-content;
+    animation: scroll-horizontal 70s linear infinite;
+    will-change: transform;
+    align-items: center;
+}
+
+.partners-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    filter: brightness(1) grayscale(0.2) contrast(1);
+    height: 140px;
+}
+
+.partner-logo img {
+    height: 100%;
+    width: auto;
+    max-width: 280px;
+    min-width: 120px;
+    object-fit: contain;
+    display: block;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.25);
+    filter: brightness(1.1) grayscale(0) drop-shadow(0 0 20px rgba(93, 211, 208, 0.4));
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .partners {
+        padding: 60px 0;
+        min-height: 200px;
+    }
+
+    .partners-title {
+        font-size: 42px;
+        margin-bottom: 50px;
+    }
+    
+    .partner-logo {
+        height: 110px;
+        padding: 15px 30px;
+    }
+
+    .partner-logo img {
+        max-width: 230px;
+        min-width: 100px;
+    }
+
+    .partners-track {
+        gap: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners {
+        padding: 60px 0;
+        min-height: 160px;
+    }
+
+    .partners-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .partner-logo {
+        height: 90px;
+        padding: 12px 25px;
+    }
+
+    .partner-logo img {
+        max-width: 180px;
+        min-width: 80px;
+    }
+
+    .partners-track {
+        gap: 70px;
+    }
+}
+

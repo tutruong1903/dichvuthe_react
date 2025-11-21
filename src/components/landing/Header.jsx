@@ -1,42 +1,41 @@
-import { Link, NavLink } from 'react-router-dom'
+import { useEffect } from 'react';
+import gsap from 'gsap';
 
 function Header() {
-	return (
-		<header className="header" id="header">
-			<div className="container">
-				<nav className="navbar">
-					<div className="logo">
-						<Link to="/" className="brand">
-							<img src="/assets/logo.png" alt="Mavic" className="brand-logo" />
-							<div className="brand-text">
-								<span className="brand-name">Mavic</span>
-								<span className="brand-tagline" style={{color: '#000000'}}>Vững Tài Chính - Trọn Niềm Tin</span>
-							</div>
-						</Link>
-					</div>
-					<div className="nav-menu" id="navMenu">
-						<ul className="nav-list">
-							<li><NavLink to="/">Trang chủ</NavLink></li>
-							<li><NavLink to="/ve-chung-toi">Về chúng tôi</NavLink></li>
-							<li><NavLink to="/dich-vu">Dịch vụ</NavLink></li>
-							<li><NavLink to="/tin-tuc">Tin tức</NavLink></li>
-							<li><NavLink to="/lien-he">Liên hệ</NavLink></li>
-						</ul>
-					</div>
-					<div className="hamburger" id="hamburger" onClick={() => {
-						const menu = document.getElementById('navMenu');
-						const ham = document.getElementById('hamburger');
-						menu?.classList.toggle('active');
-						ham?.classList.toggle('active');
-					}}>
-						<span className="bar"></span>
-						<span className="bar"></span>
-						<span className="bar"></span>
-					</div>
-				</nav>
-			</div>
-		</header>
-	)
+  useEffect(() => {
+    gsap.set("header", { y: -40, opacity: 0 });
+    
+    gsap.to("header", {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out"
+    });
+  }, []);
+
+  const handleContactClick = () => {
+    window.location.href = 'tel:0818292929';
+  };
+
+  return (
+    <header>
+      <div className="logo">
+        <img src="/assets/logo.png" alt="Mavic Logo" className="logo-image" />
+        <div className="logo-text">
+          <span className="logo-title">Mavic</span>
+          <span className="logo-slogan">Vững Tài Chính - Trọn Niềm Tin</span>
+        </div>
+      </div>
+      <nav>
+		<a href="/">Trang chủ</a>
+        <a href="/ve-chung-toi">Về chúng tôi</a>
+        <a href="/dich-vu">Dịch vụ</a>
+        {/* <a href="/tin-tuc">Tin tức</a> */}
+        <a href="/lien-he">Liên hệ</a>
+      </nav>
+      <button className="contact-btn" onClick={handleContactClick}>Liên hệ ngay</button>
+    </header>
+  );
 }
 
-export default Header 
+export default Header; 
