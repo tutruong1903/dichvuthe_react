@@ -288,3 +288,65 @@
     }
 }
 
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 20px 30px;
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .cta-btn {
+        padding: 12px 40px;
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    .credit-card {
+        width: 280px;
+        height: 180px;
+        padding: 20px;
+    }
+
+    .nfc {
+        font-size: 22px;
+    }
+
+    .card-number {
+        font-size: 18px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+    }
+
+    .card-info {
+        margin-top: 20px;
+    }
+
+    .card-info label {
+        font-size: 10px;
+    }
+
+    .card-info p {
+        font-size: 13px;
+    }
+
+    .card-chip {
+        width: 32px;
+        height: 26px;
+        margin-top: 12px;
+    }
+
+    .floating-stars .star {
+        width: 8px;
+        height: 8px;
+    }
+}
+

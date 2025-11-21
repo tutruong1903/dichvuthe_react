@@ -136,3 +136,33 @@
     }
 }
 
+@media (max-width: 480px) {
+    .partners {
+        padding: 50px 0;
+        min-height: 140px;
+    }
+
+    .partners-title {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .partner-logo {
+        height: 75px;
+        padding: 10px 20px;
+    }
+
+    .partner-logo img {
+        max-width: 150px;
+        min-width: 70px;
+    }
+
+    .partners-track {
+        gap: 60px;
+    }
+
+    .partner-logo:hover {
+        transform: scale(1.15);
+    }
+}
+

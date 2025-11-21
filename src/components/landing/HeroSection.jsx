@@ -147,7 +147,7 @@ function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-text" ref={heroTextRef}>
-        <h1 ref={heroH1Ref}>Dịch vụ rút tiền thẻ tín dụng<br />Hàng đầu Hà Nội</h1>
+        <h1 ref={heroH1Ref}>Dịch vụ rút tiền<br /> thẻ tín dụng<br />hàng đầu Hà Nội</h1>
         <p ref={heroPRef}>
           Chúng tôi cung cấp dịch vụ rút tiền thẻ tín dụng tất cả các loại. Phí thấp nhất, tốc độ nhanh nhất, uy tín nhất.
         </p>
