@@ -76,3 +76,72 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+/* Responsive */
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    nav a {
+        margin: 0 12px;
+        font-size: 14px;
+    }
+
+    .contact-btn {
+        padding: 9px 22px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 18px 30px;
+    }
+
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-title {
+        font-size: 18px;
+    }
+
+    .logo-slogan {
+        font-size: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .contact-btn {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo-image {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-title {
+        font-size: 16px;
+    }
+
+    .logo-slogan {
+        font-size: 9px;
+    }
+
+    .contact-btn {
+        padding: 7px 18px;
+        font-size: 12px;
+    }
+}
+

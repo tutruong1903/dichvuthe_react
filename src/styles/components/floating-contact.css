@@ -115,3 +115,28 @@
     }
 }
 
+@media (max-width: 480px) {
+    .floating-contact {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+    
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .phone-btn i {
+        font-size: 18px;
+    }
+    
+    .zalo-btn {
+        font-size: 11px;
+    }
+
+    .floating-btn:hover {
+        transform: translateY(-3px) scale(1.03);
+    }
+}
+
