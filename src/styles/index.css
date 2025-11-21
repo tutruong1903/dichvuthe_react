@@ -1,0 +1,22 @@
+/* Main CSS Entry Point - Import all styles */
+
+/* Global Styles */
+@import './global.css';
+
+/* Components */
+@import './components/header.css';
+@import './components/floating-contact.css';
+@import './components/hero.css';
+@import './components/stats.css';
+@import './components/partners.css';
+@import './components/offer.css';
+@import './components/design.css';
+@import './components/testimonials.css';
+@import './components/faqs.css';
+@import './components/footer.css';
+
+/* Pages */
+@import './pages/contact.css';
+@import './pages/services.css';
+@import './pages/about.css';
+
